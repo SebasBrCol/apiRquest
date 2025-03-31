@@ -7,7 +7,7 @@ const PORT = 3000;
 
 // Set EJS as the view engine
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
+app.use(express.static("public"));
 
 // Serve static files
 app.use(express.static(path.join(__dirname, "public")));
